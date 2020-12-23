@@ -1,0 +1,25 @@
+<!-- grabing header file from views -->
+<%- include('header'); -%>
+		<div class="box" id="heading">
+			<h1><%= listTitle %></h1>
+		</div>
+		<div class="box" id="">
+		<!-- Deleting items off list -->
+		<%	newListItems.forEach((item)=> { %>
+			<form class="" action="/delete" method="post">
+				<div class="item">
+					<input type="checkbox" onChange="this.form.submit()" name="checkBox" value="<%= item._id %>" id="" />
+					<p><%= item.name %></p>
+				</div>
+				<!-- hiden input to delete items off custom pages/list-->
+				<input type="hidden" name="listName"  value="<%= listTitle %>" />
+			</form>								
+
+		<%	}); %>
+			<form class="item" action="/" method="post">
+				<input type="text" name="newItem" placeholder="New task" autocomplete="off"/>
+				<button type="submit" name="list" value="<%= listTitle %>"  >+</button>
+			</form>
+		</div>
+<%- include('footer'); -%>
+<!-- grabing footer file from views -->
