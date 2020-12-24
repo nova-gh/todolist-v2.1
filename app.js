@@ -147,8 +147,6 @@ app.post("/delete", (req, res) => {
 app.get("/about", (req, res) => {
 	res.render("about");
 });
-let port = process.env.PORT;
-if (port == null || port == "") {
-	port = 3000;
-}
-app.listen(port);
+app.listen(process.env.PORT || 3000, () => {
+	console.log("Serveer up local port: 3000");
+});
