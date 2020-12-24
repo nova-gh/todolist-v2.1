@@ -10,4 +10,4 @@ Simple to-do list for task.
 
 ##### Deployed in Heroku
 
-##### [Live Link](url)
+##### [Live Link](https://ng-list3.herokuapp.com)
