@@ -17,7 +17,7 @@ app.use(express.static("public"));
 //==Mongoose Connection
 
 mongoose.connect(
-	"mongodb+srv://admin:admin413@cluster0.hgnmf.mongodb.net/todolistDB?retryWrites=true&w=majority",
+	"mongodb+srv://admin:admin413@cluster0.hgnmf.mongodb.net/todolistDB",
 	{ useNewUrlParser: true, useUnifiedTopology: true }
 );
 //==DB scehma
