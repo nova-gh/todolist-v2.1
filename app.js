@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+let port = process.env.PORT || 3000;
 
 // const items = ["Buy Food", "Work out", "cook food"];
 // const workItems = [];
@@ -147,6 +148,6 @@ app.post("/delete", (req, res) => {
 app.get("/about", (req, res) => {
 	res.render("about");
 });
-app.listen(process.env.PORT || 3000, () => {
-	console.log("Serveer up local port: 3000");
+app.listen(port, () => {
+	console.log(`Server is up! Local Port: ${port}!`);
 });
