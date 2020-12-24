@@ -8,11 +8,12 @@ let port = process.env.PORT || 3000;
 // const items = ["Buy Food", "Work out", "cook food"];
 // const workItems = [];
 const app = express();
+//ejs- use ejs as view engine
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 //static files from pub folder
 app.use(express.static("public"));
-//ejs- use ejs as view engine
-app.set("view engine", "ejs");
+
 //==Mongoose Connection
 
 mongoose.connect(
